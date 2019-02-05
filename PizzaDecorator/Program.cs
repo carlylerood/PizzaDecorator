@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PizzaDecorator.ConcreteComponent;
+using System;
 
 namespace PizzaDecorator
 {
@@ -6,7 +7,9 @@ namespace PizzaDecorator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var pizza = new SmallPizza();
+            Console.WriteLine("Description: " + pizza.GetDescription());
+            Console.WriteLine("Price: $" + pizza.GetCost());
             Console.ReadLine();
         }
     }
