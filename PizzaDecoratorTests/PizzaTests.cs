@@ -53,5 +53,13 @@ namespace PizzaDecoratorTests
             var result = pizza.GetDescription();
             Assert.Equal("Small pizza, cheese, pepperoni", result);
         }
+
+        [Fact]
+        public void GetCost_LargePepperoniPizzaWithCheese_ReturnsCost()
+        {
+            var pizza = new PepperoniPizza(new CheesePizza(new LargePizza()));
+            var result = pizza.GetCost();
+            Assert.Equal(10.25, result);
+        }
     }
 }
